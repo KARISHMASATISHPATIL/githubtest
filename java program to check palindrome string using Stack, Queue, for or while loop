@@ -1,0 +1,115 @@
+import java.util.Stack;
+import java.util.Scanner;
+class PalindromeTest {
+
+    public static void main(String[] args) {
+
+    	System.out.print("Enter any string:");
+        Scanner in=new Scanner(System.in);
+        String inputString = in.nextLine();
+        Stack stack = new Stack();
+
+        for (int i = 0; i < inputString.length(); i++) {
+            stack.push(inputString.charAt(i));
+        }
+
+        String reverseString = "";
+
+        while (!stack.isEmpty()) {
+            reverseString = reverseString+stack.pop();
+        }
+
+        if (inputString.equals(reverseString))
+            System.out.println("The input String is a palindrome.");
+        else
+            System.out.println("The input String is not a palindrome.");
+
+    }
+}
+Output 1:
+
+Enter any string:abccba
+The input String is a palindrome.
+Output 2:
+
+Enter any string:abcdef
+The input String is not a palindrome.
+Program 2: Palindrome check Using Queue
+
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.LinkedList;
+class PalindromeTest {
+
+    public static void main(String[] args) {
+
+    	System.out.print("Enter any string:");
+        Scanner in=new Scanner(System.in);
+        String inputString = in.nextLine();
+        Queue queue = new LinkedList();
+
+        for (int i = inputString.length()-1; i >=0; i--) {
+            queue.add(inputString.charAt(i));
+        }
+
+        String reverseString = "";
+
+        while (!queue.isEmpty()) {
+            reverseString = reverseString+queue.remove();
+        }
+        if (inputString.equals(reverseString))
+            System.out.println("The input String is a palindrome.");
+        else
+            System.out.println("The input String is not a palindrome.");
+   }
+}
+Output 1:
+
+Enter any string:xyzzyx
+xyzzyx
+The input String is a palindrome.
+Output 2:
+
+Enter any string:xyz
+The input String is not a palindrome.
+Program 3: Using for loop/While loop and String function charAt
+
+import java.util.Scanner;
+class PalindromeTest {
+   public static void main(String args[])
+   {
+      String reverseString="";
+      Scanner scanner = new Scanner(System.in);
+
+      System.out.println("Enter a string to check if it is a palindrome:");
+      String inputString = scanner.nextLine();
+
+      int length = inputString.length();
+
+      for ( int i = length - 1 ; i >= 0 ; i-- )
+         reverseString = reverseString + inputString.charAt(i);
+
+      if (inputString.equals(reverseString))
+         System.out.println("Input string is a palindrome.");
+      else
+         System.out.println("Input string is not a palindrome.");
+
+   }
+}
+Output 1:
+
+Enter a string to check if it is a palindrome:
+aabbaa
+Input string is a palindrome.
+Output 2:
+
+Enter a string to check if it is a palindrome:
+aaabbb
+Input string is not a palindrome.
+If you wanna use While Loop in above program then replace the for loop with this code:
+
+int i = length-1;
+while ( i >= 0){
+    reverseString = reverseString + inputString.charAt(i);
+    i--;
+}
