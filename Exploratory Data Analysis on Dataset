@@ -1,0 +1,11 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import folium
+from folium.plugins import MarkerCluster
+
+%matplotlib inline
+#Importing the dataset.
+
+data = pd.read_csv("globalterrorismdb_0718dist.csv",encoding ='latin =1'
