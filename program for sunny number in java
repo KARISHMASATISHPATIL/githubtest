@@ -1,18 +1,16 @@
-import java.util.Scanner;
+package com.sunnynumber
 public class JavaExample
 {
     public static void main(String args[])
     {
-        Scanner scan = new Scanner(System.in);
+        JavaExample j = new JavaExample();
         System.out.print("Enter the number: ");
 
         //Storing the input number in a variable num
         int num = scan.nextInt();
         scan.close();
 
-        /* Calling the user-defined function isSunny()
-         * to check whether the input number is Sunny
-         */
+    
         isSunny(num);
     }
 
