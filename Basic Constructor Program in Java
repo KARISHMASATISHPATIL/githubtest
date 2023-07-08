@@ -1,0 +1,21 @@
+package com.home;
+
+public class College {
+	College(String Studentemailid){
+		  
+		System.out.println("Enter email id =" +Studentemailid);
+	}
+	void college(int age ,int phonenumber,String name,int rollno ) {
+		System.out.println("Student age ="+age);
+		System.out.println("Student mobile number = "+phonenumber);
+		System.out.println("Student name ="+name);
+		System.out.println("Student roll no ="+rollno);
+		
+	}
+	public static void main(String[] args) {
+		College c = new College("patilkarishma@gmail.com");
+				c.college(21,9087654567,"karishma",8);
+				
+	}
+
+}
